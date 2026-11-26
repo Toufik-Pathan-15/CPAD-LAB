@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Lab5AppMAUI.MainPage"
+    BackgroundColor="#EAF2FF">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="16"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Interactive Counter"
+                FontSize="26"
+                FontAttributes="Bold"
+                TextColor="#153A70"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text=".NET MAUI Lab 5"
+                FontSize="16"
+                TextColor="#65758B"
+                HorizontalOptions="Center" />
+
+            <Border
+                BackgroundColor="White"
+                Padding="24"
+                StrokeShape="RoundRectangle 20">
+
+                <VerticalStackLayout Spacing="16">
+
+                    <Label
+                        x:Name="CountLabel"
+                        Text="0"
+                        FontSize="42"
+                        FontAttributes="Bold"
+                        TextColor="#153A70"
+                        HorizontalOptions="Center" />
+
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                        <Button
+                            Grid.Column="0"
+                            Text="Increment"
+                            Clicked="IncrementClicked"
+                            BackgroundColor="#2563EB"
+                            TextColor="White" />
+
+                        <Button
+                            Grid.Column="1"
+                            Text="Decrement"
+                            Clicked="DecrementClicked"
+                            BackgroundColor="#2563EB"
+                            TextColor="White" />
+                    </Grid>
+
+                    <Button
+                        Text="Reset"
+                        Clicked="ResetClicked"
+                        BackgroundColor="#475569"
+                        TextColor="White" />
+
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
